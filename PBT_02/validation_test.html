@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra HTML5 Validation — Câu A2</title>
+</head>
+<body>
+
+    <h1>Thử nghiệm cơ chế Validation mặc định của HTML5</h1>
+    
+    <form action="#" method="POST">
+        <!-- Trường hợp 1 -->
+        <p>
+            <label>Trường hợp 1 (Để trống):</label><br>
+            <input type="text" required value="">
+        </p>
+
+        <!-- Trường hợp 2 -->
+        <p>
+            <label>Trường hợp 2 (Sai định dạng Email):</label><br>
+            <input type="email" value="abc">
+        </p>
+
+        <!-- Trường hợp 3 -->
+        <p>
+            <label>Trường hợp 3 (Vượt quá số Max):</label><br>
+            <input type="number" min="1" max="10" value="15">
+        </p>
+
+        <!-- Trường hợp 4 -->
+        <p>
+            <label>Trường hợp 4 (Sai Pattern Regex):</label><br>
+            <input type="text" pattern="[0-9]{10}" value="abc123">
+        </p>
+
+        <!-- Trường hợp 5 -->
+        <p>
+            <label>Trường hợp 5 (Thiếu độ dài Minlength):</label><br>
+            <input type="password" minlength="8" value="123">
+        </p>
+
+        <button type="submit">Bấm Submit để Test Lỗi</button>
+    </form>
+
+</body>
+</html>

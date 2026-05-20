@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thủ tục đặt hàng và thanh toán</title>
+</head>
+<body>
+
+    <header>
+        <h1>Thủ Tục Thanh Toán Đơn Hàng</h1>
+    </header>
+
+    <main>
+        <!-- Tìm kiếm nhanh sản phẩm bổ sung sử dụng Datalist (Tính năng nâng cao Bonus) -->
+        <section>
+            <label for="search-more">Tìm nhanh phụ kiện mua kèm:</label>
+            <input type="search" id="search-more" name="search-more" list="product-suggestions" placeholder="Gõ để tìm nhanh...">
+            <datalist id="product-suggestions">
+                <option value="Ốp lưng Silicon chống sốc"></option>
+                <option value="Củ sạc nhanh 30W chuẩn PD"></option>
+                <option value="Kính cường lực full màn hình"></option>
+                <option value="Tai nghe không dây Bluetooth"></option>
+            </datalist>
+        </section>
+        <br>
+
+        <form action="#" method="POST">
+            
+            <!-- Phần 1: Bảng danh sách giỏ hàng hiển thị dữ liệu -->
+            <section>
+                <h2>1. Chi tiết giỏ hàng hiện tại</h2>
+                <table border="1" style="width: 100%; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Điện thoại iPhone 16 Pro Max</td>
+                            <td>34.990.000đ</td>
+                            <td>1</td>
+                            <td>34.990.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ốp lưng cao cấp MagSafe</td>
+                            <td>1.200.000đ</td>
+                            <td>2</td>
+                            <td>2.400.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Cáp sạc USB-C siêu bền</td>
+                            <td>610.000đ</td>
+                            <td>1</td>
+                            <td>610.000đ</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" style="text-align: right;"><strong>Tổng cộng chi phí đơn hàng:</strong></td>
+                            <td><strong><output>38.000.000đ</output></strong></td> <!-- Dùng output hiển thị tổng tiền -->
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <p>
+                    <label>Tiến trình tích lũy thẻ thành viên vàng:</label><br>
+                    <!-- Dùng tiến trình progress đo điểm tích lũy Bonus -->
+                    <progress value="75" max="100"></progress> (75/100 điểm)
+                </p>
+            </section>
+
+            <!-- Phần 2: Phương thức thanh toán cấu hình điều khoản -->
+            <section>
+                <h2>2. Hình thức và phương thức thanh toán</h2>
+                <p>
+                    <label>Chọn phương thức thanh toán:</label><br>
+                    <input type="radio" id="pay-cod" name="payment" value="cod" checked>
+                    <label for="pay-cod">Thanh toán khi nhận hàng (COD)</label><br>
+                    <input type="radio" id="pay-bank" name="payment" value="transfer">
+                    <label for="pay-bank">Chuyển khoản ngân hàng qua mã QR</label><br>
+                    <input type="radio" id="pay-wallet" name="payment" value="wallet">
+                    <label for="pay-wallet">Thanh toán qua ví điện tử liên kết</label>
+                </p>
+                <p>
+                    <label for="coupon">Mã giảm giá (Coupon):</label><br>
+                    <!-- Yêu cầu chuẩn chữ SALE + 4 số, VD: SALE2026 -->
+                    <input type="text" id="coupon" name="coupon" pattern="SALE[0-9]{4}" placeholder="SALE2026" title="Mã giảm giá bắt đầu bằng chữ 'SALE' kèm theo đúng 4 chữ số phía sau.">
+                </p>
+                <p>
+                    <label for="notes">Ghi chú yêu cầu đóng gói (Tùy chọn):</label><br>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Nhắc nhở shipper hoặc lưu ý đặc biệt..."></textarea>
+                </p>
+            </section>
+
+            <!-- Phần 3: Lập lịch và thông tin vận chuyển cụ thể -->
+            <section>
+                <h2>3. Thời gian và lịch trình giao hàng mong muốn</h2>
+                <p>
+                    <label for="delivery-date">Ngày giao hàng mong muốn:</label><br>
+                    <!-- min="2026-05-21" chặn không cho chọn ngày hôm nay hay quá khứ, chỉ bắt đầu từ ngày mai trở đi -->
+                    <input type="date" id="delivery-date" name="delivery-date" min="2026-05-21" required>
+                </p>
+                <p>
+                    <label for="delivery-time">Khung giờ nhận hàng tối ưu:</label><br>
+                    <select id="delivery-time" name="delivery-time" required>
+                        <option value="morning">Sáng (8h00 - 12h00)</option>
+                        <option value="afternoon">Chiều (14h00 - 18h00)</option>
+                        <option value="evening">Tối (18h00 - 21h00)</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="delivery-range">Thời gian ước tính mong muốn (Số ngày nhận hàng):</label><br>
+                    <input type="range" id="delivery-range" name="delivery-range" min="1" max="7" step="1" value="3">
+                    <br><span>(Biên độ lựa chọn giao hỏa tốc từ 1 ngày đến 7 ngày)</span>
+                </p>
+            </section>
+
+            <br>
+            <p>
+                <button type="submit" aria-label="Xác nhận đặt hàng">Xác nhận hoàn tất đặt hàng</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cổng thanh toán mã hóa ShopTLU.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản E-Commerce</title>
+</head>
+<body>
+
+    <header>
+        <h1>Đăng Ký Tài Khoản Mới</h1>
+    </header>
+
+    <main>
+        <form action="#" method="POST">
+            
+            <!-- Fieldset 1: Thông tin cá nhân -->
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <p>
+                    <label Kakao for="fullname">Họ và tên:</label><br>
+                    <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" placeholder="Nguyễn Văn A">
+                </p>
+                <p>
+                    <label for="email">Địa chỉ Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                </p>
+                <p>
+                    <label for="phone">Số điện thoại:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0901234567" title="Vui lòng nhập đúng 10 chữ số">
+                </p>
+                <p>
+                    <label for="dob">Ngày sinh:</label><br>
+                    <!-- max="2026-05-20" đảm bảo không chọn được ngày trong tương lai -->
+                    <input type="date" id="dob" name="dob" max="2026-05-20">
+                </p>
+                <p>
+                    <label>Giới tính:</label><br>
+                    <input type="radio" id="gender-male" name="gender" value="nam">
+                    <label for="gender-male">Nam</label>
+                    <input type="radio" id="gender-female" name="gender" value="nu">
+                    <label for="gender-female">Nữ</label>
+                    <input type="radio" id="gender-other" name="gender" value="khac">
+                    <label for="gender-other">Khác</label>
+                </p>
+            </fieldset>
+
+            <!-- Fieldset 2: Tài khoản -->
+            <fieldset>
+                <legend>Tài khoản</legend>
+                <p>
+                    <label for="username">Tên đăng nhập (Username):</label><br>
+                    <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{3,20}" placeholder="user_name123" title="Từ 3-20 ký tự, chỉ gồm chữ, số và dấu gạch dưới">
+                </p>
+                <p>
+                    <label for="password">Mật khẩu:</label><br>
+                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" placeholder="••••••••" title="Mật khẩu dài ít nhất 8 ký tự, phải chứa ít nhất 1 chữ hoa và 1 chữ số">
+                </p>
+                <p>
+                    <label for="confirm-password">Xác nhận mật khẩu:</label><br>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="8" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" placeholder="••••••••">
+                </p>
+            </fieldset>
+
+            <!-- Fieldset 3: Thông tin giao hàng -->
+            <fieldset>
+                <legend>Thông tin giao hàng</legend>
+                <p>
+                    <label for="city">Tỉnh / Thành phố:</label><br>
+                    <select id="city" name="city" required>
+                        <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                        <option value="hn">Hà Nội</option>
+                        <option value="hcm">TP. Hồ Chí Minh</option>
+                        <option value="dn">Đà Nẵng</option>
+                        <option value="hp">Hải Phòng</option>
+                        <option value="ct">Cần Thơ</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="district">Quận / Huyện:</label><br>
+                    <select id="district" name="district">
+                        <option value="">-- Chọn Quận/Huyện --</option>
+                        <option value="q1">Quận 1</option>
+                        <option value="q_cg">Quận Cầu Giấy</option>
+                        <option value="h_bt">Quận Hai Bà Trưng</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="address">Địa chỉ chi tiết:</label><br>
+                    <textarea id="address" name="address" rows="3" placeholder="Số nhà, tên đường, tòa nhà..."></textarea>
+                </p>
+            </fieldset>
+
+            <!-- Điều khoản và nút bấm xử lý -->
+            <p>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">Tôi hoàn toàn đồng ý với các điều khoản và chính sách dịch vụ.</label>
+            </p>
+
+            <p>
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Nhập lại</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ShopTLU. Bản quyền thuộc về hệ thống.</p>
+    </footer>
+
+</body>
+</html>

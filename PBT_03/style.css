@@ -1,0 +1,108 @@
+/* 1. Dòng đầu tiên thiết lập quy chuẩn hộp border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Cấu hình Typography và màu nền cơ bản cho Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 3. Header sử dụng màu nền Gradient chuyển sắc nghệ thuật */
+header {
+    background: linear-gradient(135deg, #007acc, #004b80);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 4. Định dạng các liên kết điều hướng và trạng thái Hover/Active */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Pseudo-class :hover */
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Class định dạng trạng thái đang kích hoạt .active */
+nav a.active {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #004b80;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+}
+
+/* 5. Thiết lập mỹ thuật cho bảng kỹ năng chuyên sâu */
+table.skills-table {
+    width: 100%;
+    border-collapse: collapse; /* Khử lề đôi viền bảng */
+    margin-top: 10px;
+}
+
+table.skills-table th, table.skills-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Định dạng dòng đầu Header bảng */
+table.skills-table th {
+    background-color: #004b80;
+    color: white;
+}
+
+/* Zebra striping - Đổi màu dòng chẵn xen kẽ */
+table.skills-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover row - Tạo hiệu ứng khi di chuột qua hàng dữ liệu */
+table.skills-table tbody tr:hover {
+    background-color: #e6f2ff;
+    cursor: pointer;
+}
+
+/* 6. Định dạng khu vực chân trang Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}

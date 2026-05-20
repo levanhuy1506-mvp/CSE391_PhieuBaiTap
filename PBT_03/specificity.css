@@ -1,0 +1,32 @@
+/* Rule 1 (0,0,1) */
+p { color: pink; }
+
+/* Rule 2 (0,0,2) - Thẻ lồng nhau */
+body p { color: gray; }
+
+/* Rule 3 (0,1,0) */
+.text { color: brown; }
+
+/* Rule 4 (0,1,1) - Thẻ kèm class */
+p.text { color: cyan; }
+
+/* Rule 5 (0,2,0) - Hai class kết hợp */
+.text.highlight { color: purple; }
+
+/* Rule 6 (0,2,1) - Thẻ kèm 2 class */
+p.text.highlight { color: orange; }
+
+/* Rule 7 (1,0,0) - Bộ chọn ID quyền năng */
+#demo { color: silver; }
+
+/* Rule 8 (1,0,1) - ID kết hợp thẻ */
+p#demo { color: gold; }
+
+/* Rule 9 (1,1,1) - ID phối class và thẻ */
+p#demo.text { color: blue; }
+
+/* Rule 10 (1,2,1) - Cao nhất không tính important */
+p#demo.text.highlight { color: red; }
+
+/* Trả lời câu hỏi: Phần tử hiển thị MÀU ĐỎ (red) vì sở hữu điểm score cao nhất.
+   Thay đổi thứ tự rules trong file không làm đổi màu, vì điểm số quy định độ ưu tiên chứ không phụ thuộc dòng viết trước sau. */

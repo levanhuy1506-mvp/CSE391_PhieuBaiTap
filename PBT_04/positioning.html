@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Playground</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <div class="logo">ShopTLU</div>
+        <nav class="nav-links">
+            <a href="#">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Khung nội dung chính -->
+    <div class="page-container">
+        
+        <!-- Sticky Sidebar -->
+        <aside class="sticky-sidebar">
+            <h3>Bộ lọc tìm kiếm</h3>
+            <ul>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+            </ul>
+        </aside>
+
+        <!-- Vùng nội dung giả lập scroll dài -->
+        <main class="content-area">
+            <h2>Danh sách sản phẩm mới nhất</h2>
+            <p>Cuộn chuột xuống dưới để kiểm tra tính năng cố định của Header và tính năng bám dính của Sidebar.</p>
+            
+            <!-- Card Sản phẩm có Badge HOT tuyệt đối -->
+            <div class="product-card">
+                <span class="badge-hot">HOT</span>
+                <img src="https://placehold.co/200x150" alt="iPhone 16">
+                <h3>iPhone 16 Pro Max</h3>
+                <p>Giá: 34.990.000đ</p>
+            </div>
+
+            <!-- Đoạn text giả lập độ dài trang để cuộn chuột -->
+            <div class="spacer">
+                <p>Đang cuộn trang dữ liệu... Thử xem Sidebar có dính lại không?</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scroll to top button cố định -->
+    <button class="scroll-top-btn" aria-label="Cuộn lên đầu trang">↑</button>
+
+</body>
+</html>

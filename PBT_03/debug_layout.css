@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 960px;
+    margin: 20px auto;
+    border: 3px dashed black;
+    overflow: hidden; /* Khóa dòng chảy float */
+}
+
+/* SỬA LỖI THEO CÁCH 1: Áp dụng box-sizing: border-box */
+.sidebar {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #ffe6cc;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #e6f7ff;
+}

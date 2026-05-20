@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Grid Layout</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+    <!-- Layout chính của hệ thống trang chủ dùng CSS Grid -->
+    <div class="main-grid-container">
+        
+        <!-- Header vùng cao nhất -->
+        <header class="grid-header">
+            <div class="logo">ShopTLU Superstore</div>
+            <div class="search-bar">Thanh tìm kiếm thông minh</div>
+        </header>
+
+        <!-- Khối Hero Banner giới thiệu nổi bật -->
+        <section class="grid-hero">
+            <div class="banner-main">
+                <h2>Siêu Ưu Đãi Đón Hè 2026</h2>
+                <p>Giảm giá lên đến 50% cho toàn bộ nhóm mặt hàng linh kiện phụ kiện.</p>
+            </div>
+            <!-- Sản phẩm nổi bật chiếm diện tích gấp đôi (Bonus) -->
+            <div class="featured-product-badge">
+                <span>Sản phẩm HOT nhất tuần</span>
+                <h3>MacBook Pro M4 Pro</h3>
+                <p>Giá độc quyền: 54.990.000đ</p>
+            </div>
+        </section>
+
+        <!-- Sidebar bộ lọc điều hướng -->
+        <aside class="grid-sidebar">
+            <h3>Danh mục bộ lọc</h3>
+            <div class="filter-group">
+                <p><strong>Thương hiệu:</strong></p>
+                <label><input type="checkbox"> Apple</label><br>
+                <label><input type="checkbox"> Samsung</label><br>
+                <label><input type="checkbox"> Sony</label>
+            </div>
+            <br>
+            <div class="filter-group">
+                <p><strong>Khoảng giá:</strong></p>
+                <label><input type="checkbox"> Dưới 10 triệu</label><br>
+                <label><input type="checkbox"> Từ 10 - 20 triệu</label>
+            </div>
+        </aside>
+
+        <!-- Main Content bọc hệ thống grid sản phẩm con bên trong -->
+        <main class="grid-main">
+            <h2>Danh sách sản phẩm hệ thống</h2>
+            
+            <div class="inner-product-grid">
+                <!-- Lặp lại 6 Card sản phẩm -->
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>iPhone 16 Pro</h4>
+                    <p>28.990.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>Galaxy S24</h4>
+                    <p>19.990.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>Asus ROG Strix</h4>
+                    <p>38.500.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>Sony WH-CH720N</h4>
+                    <p>2.990.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>Logitech MX Master 3S</h4>
+                    <p>2.490.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <img src="https://placehold.co/200x150" alt="sp">
+                    <h4>Bàn phím Akko 3098B</h4>
+                    <p>1.650.000đ</p>
+                </article>
+            </div>
+        </main>
+
+        <!-- Khối đặt quảng cáo phụ Ads bổ trợ -->
+        <aside class="grid-ads">
+            <div class="ads-banner">
+                <img src="https://placehold.co/200x400" alt="Quảng cáo">
+                <p>Khung banner đối tác tài trợ liên kết</p>
+            </div>
+        </aside>
+
+        <!-- Chân trang hệ thống -->
+        <footer class="grid-footer">
+            <p>&copy; 2026 ShopTLU E-Commerce Platform. Dựng hoàn toàn bằng CSS Grid Bản quyền nâng cao.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout System</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+    <!-- Phần 1: Thanh điều hướng Flexbox hoàn hảo -->
+    <nav class="flex-navbar">
+        <div class="nav-logo">ShopTLU</div>
+        <ul class="nav-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="nav-auth">
+            <button class="btn-login">Login</button>
+            <button class="btn-register">Register</button>
+        </div>
+    </nav>
+
+    <!-- Phần 2: Lưới sản phẩm Flexbox 4 cột -->
+    <main class="products-section">
+        <h2>Sản phẩm công nghệ mới</h2>
+        
+        <div class="flex-grid">
+            <!-- Lặp lại 8 card sản phẩm có chiều cao nút đồng bộ -->
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="iPhone 16">
+                <div class="card-body">
+                    <h3>iPhone 16 Pro Max</h3>
+                    <p class="desc">Chip A18 Pro mãnh thú, camera siêu sắc nét.</p>
+                    <p class="price">34.990.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="MacBook">
+                <div class="card-body">
+                    <h3>MacBook Pro M4</h3>
+                    <p class="desc">Hiệu năng xử lý đồ họa vượt trội cho lập trình viên.</p>
+                    <p class="price">45.990.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="iPad">
+                <div class="card-body">
+                    <h3>iPad Air 6 M2</h3>
+                    <p class="desc">Thiết kế mỏng nhẹ, hỗ trợ Apple Pencil Pro.</p>
+                    <p class="price">16.990.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="Watch">
+                <div class="card-body">
+                    <h3>Apple Watch Ultra 2</h3>
+                    <p class="desc">Thời lượng pin bền bỉ cho các hoạt động thể thao ngoài trời.</p>
+                    <p class="price">21.990.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="AirPods">
+                <div class="card-body">
+                    <h3>AirPods Pro 2</h3>
+                    <p class="desc">Chống ồn chủ động thông minh thế hệ mới.</p>
+                    <p class="price">6.190.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="S24 Ultra">
+                <div class="card-body">
+                    <h3>Galaxy S24 Ultra</h3>
+                    <p class="desc">Tích hợp quyền năng Galaxy AI dịch thuật trực tiếp.</p>
+                    <p class="price">29.990.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="Sony WH">
+                <div class="card-body">
+                    <h3>Sony WH-1000XM5</h3>
+                    <p class="desc">Chất lượng âm thanh phòng thu đỉnh cao âm trầm sâu lắng.</p>
+                    <p class="price">8.490.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+
+            <article class="flex-card">
+                <img src="https://placehold.co/300x200" alt="Keychron">
+                <div class="card-body">
+                    <h3>Bàn phím Keychron K2</h3>
+                    <p class="desc">Bàn phím cơ gõ êm ái, kết nối đa thiết bị linh hoạt.</p>
+                    <p class="price">1.850.000đ</p>
+                    <button class="btn-buy">Mua ngay</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+</body>
+</html>
