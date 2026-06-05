@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">TechStore</div>
+        <div class="nav-controls">
+            <input type="text" id="searchInput" placeholder="Tìm sản phẩm nhanh...">
+            <button id="themeToggle">🌓 Mode</button>
+            <div class="cart-icon">
+                🛒 <span id="cartBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Danh mục</h3>
+            <div id="categoryFilters">
+                <button class="cat-btn active" data-category="all">Tất cả</button>
+                <button class="cat-btn" data-category="phone">Điện thoại</button>
+                <button class="cat-btn" data-category="laptop">Laptop</button>
+                <button class="cat-btn" data-category="audio">Âm thanh</button>
+                <button class="cat-btn" data-category="watch">Đồng hồ</button>
+            </div>
+            
+            <h3 style="margin-top:20px;">Sắp xếp</h3>
+            <select id="sortSelect">
+                <option value="none">Mặc định</option>
+                <option value="priceAsc">Giá tăng dần</option>
+                <option value="priceDesc">Giá giảm dần</option>
+                <option value="nameAZ">Tên A-Z</option>
+                <option value="ratingDesc">Đánh giá cao nhất</option>
+            </select>
+        </aside>
+
+        <main class="products-grid" id="productsGrid"></main>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

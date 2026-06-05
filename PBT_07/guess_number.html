@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game — Đoán Số Trúng Thưởng</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f8f9fa; }
+        .btn-play { padding: 15px 30px; font-size: 18px; font-weight: bold; background-color: #228be6; color: white; border: none; border-radius: 6px; cursor: pointer; }
+        .btn-play:hover { background-color: #1c7ed6; }
+    </style>
+</head>
+<body>
+
+    <h1>Chào mừng bạn đến với Mini Game Đoán Số</h1>
+    <p>Máy chủ tự động sinh ngẫu nhiên một con số may mắn nằm trong khoảng biên từ 1 đến 100.</p>
+    <p>Bạn sở hữu tổng cộng tối đa là <strong>7 lượt đoán thử</strong>. Chúc may mắn!</p>
+    <br>
+    
+    <!-- Bấm nút sẽ chạy hàm khởi chạy trò chơi viết ở file tách rời guess.js -->
+    <button class="btn-play" onclick="startGame()">Bắt Đầu Chơi Ngay</button>
+
+    <!-- Nhúng logic điều phối JavaScript external -->
+    <script src="guess.js"></script>
+</body>
+</html>

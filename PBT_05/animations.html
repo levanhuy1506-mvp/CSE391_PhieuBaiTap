@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced Animations Lab</title>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+    <!-- 1. Hiệu ứng Fade-in nạp trang (Hiệu ứng số 5) -->
+    <main class="animation-container animate-fade-in">
+        
+        <h1>Thử Nghiệm Hiệu Ứng Chuyển Động CSS3</h1>
+        
+        <!-- Khu vực hiển thị Loading Spinner (Hiệu ứng số 4) -->
+        <div class="spinner-section">
+            <p><strong>Hiệu ứng 4:</strong> Vòng xoay vô hạn (Loading Spinner)</p>
+            <div class="loading-spinner"></div>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- 2. Thẻ Card áp dụng hiệu ứng Hover bốc lên & Đổ bóng nâng cao (Hiệu ứng số 1) -->
+            <article class="animated-card">
+                
+                <!-- Hộp bọc ảnh overflow hidden phục vụ hiệu ứng Zoom ảnh (Hiệu ứng số 3) -->
+                <div class="img-zoom-container">
+                    <img src="https://placehold.co/300x200" alt="Sản phẩm mượt mà" class="zoom-image">
+                </div>
+                
+                <div class="card-body">
+                    <h3>Sản Phẩm Trải Nghiệm</h3>
+                    <p>Hãy di chuột vào tấm thẻ này, bức ảnh phía trên và nút bấm phía dưới để chứng kiến sức mạnh chuyển động của CSS.</p>
+                    
+                    <!-- 3. Nút bấm co dãn nhẹ đổi màu (Hiệu ứng số 2) -->
+                    <button class="animated-btn">Mua ngay</button>
+                </div>
+            </article>
+        </div>
+
+    </main>
+
+</body>
+</html>

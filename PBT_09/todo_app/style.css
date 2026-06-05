@@ -1,0 +1,64 @@
+:root {
+    --primary: #4f46e5;
+    --background: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.todo-container {
+    background: var(--card);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+h1 { text-align: center; margin-bottom: 20px; color: var(--primary); }
+form { display: flex; gap: 10px; margin-bottom: 20px; }
+form input {
+    flex: 1; padding: 12px; border: 1px solid var(--border);
+    border-radius: 6px; font-size: 16px; outline: none;
+}
+form button {
+    padding: 12px 20px; background: var(--primary); color: white;
+    border: none; border-radius: 6px; cursor: pointer; font-weight: bold;
+}
+#todoList { list-style: none; padding: 0; margin-bottom: 20px; }
+.todo-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px; border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+.todo-item.completed .todo-text {
+    text-decoration: line-through; color: var(--text-light);
+}
+.todo-text { flex: 1; cursor: pointer; }
+.edit-input {
+    flex: 1; padding: 8px; border: 1px solid var(--primary);
+    border-radius: 4px; font-size: 16px;
+}
+.delete-btn {
+    background: none; border: none; cursor: pointer; font-size: 16px;
+}
+.footer-controls {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 14px; color: var(--text-light); border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+.filter-buttons button {
+    background: none; border: none; cursor: pointer; color: var(--text-light);
+    margin: 0 2px; padding: 4px 8px; border-radius: 4px;
+}
+.filter-buttons button.active {
+    background: var(--primary); color: white;
+}
+#clearCompletedBtn { background: none; border: none; cursor: pointer; color: #ef4444; }

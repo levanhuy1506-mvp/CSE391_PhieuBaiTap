@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page — Bootstrap 5</title>
+    <!-- Nhúng CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. Thanh điều hướng Navbar chuẩn Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">ShopTLU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Tìm sản phẩm..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Tìm</button>
+                </form>
+                <div class="text-white position-relative cursor-pointer">
+                    <span class="fs-5">🛒</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section: Vòng xoay ảnh Carousel 3 Slides -->
+    <div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 450px; background-color: #495057;">
+                <img src="https://placehold.co/1200x450/1a1b1e/ffffff?text=Sieu+Uu+Dai+Mua+He" class="d-block w-100 h-100 object-fit-cover opacity-50" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block text-start start-10">
+                    <h2 class="display-4 fw-bold">Siêu Ưu Đãi Mùa Hè 2026</h2>
+                    <p class="lead">Giảm giá lên đến 50% cho toàn bộ nhóm hàng thiết bị công nghệ.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 450px; background-color: #495057;">
+                <img src="https://placehold.co/1200x450/212529/ffffff?text=Flagship+Gia+Tot" class="d-block w-100 h-100 object-fit-cover opacity-50" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Flagship Độc Quyền giá Tốt</h2>
+                    <p class="lead">Trải nghiệm iPhone 16 Pro Max với mức trợ giá hấp dẫn nhất thị trường.</p>
+                    <a href="#" class="btn btn-success btn-lg">Xem Chi Tiết</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 450px; background-color: #495057;">
+                <img src="https://placehold.co/1200x450/343a40/ffffff?text=He+Sinh+Thai+Cong+Nghe" class="d-block w-100 h-100 object-fit-cover opacity-50" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block text-end end-10">
+                    <h2 class="display-4 fw-bold">Hệ Sinh Thái Phụ Kiện</h2>
+                    <p class="lead">Mua kèm cáp sạc, ốp lưng Silicon nhận ngay voucher giảm thêm 10%.</p>
+                    <a href="#" class="btn btn-warning btn-lg">Khám Phá</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 3. Product Grid & Cards (Đáp ứng: 4 cột desktop, 2 cột tablet, 1 cột mobile) -->
+    <main class="container mb-5">
+        <h3 class="text-center fw-bold mb-4">Sản Phẩm Nổi Bật</h3>
+        <div class="row g-4">
+            
+            <!-- Thẻ Card Sản phẩm 1 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="position-absolute top-0 end-0 m-2 badge bg-danger">Sale</span>
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Sản phẩm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">iPhone 16 Pro Max</h5>
+                        <p class="card-text text-muted small flex-grow-1">Chipset A18 Pro mạnh mẽ, bộ ba camera zoom quang học sắc nét.</p>
+                        <p class="text-danger fw-bold mb-3">34.990.000đ</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thẻ Card Sản phẩm 2 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="position-absolute top-0 end-0 m-2 badge bg-danger">Sale</span>
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Sản phẩm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">MacBook Pro M4</h5>
+                        <p class="card-text text-muted small flex-grow-1">Hiệu năng đồ họa mượt mà, thời lượng pin bền bỉ cả ngày dài.</p>
+                        <p class="text-danger fw-bold mb-3">45.990.000đ</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thẻ Card Sản phẩm 3 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Sản phẩm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">iPad Air 6 M2</h5>
+                        <p class="card-text text-muted small flex-grow-1">Màn hình Liquid Retina rực rỡ, hỗ trợ bút Apple Pencil Pro.</p>
+                        <p class="text-danger fw-bold mb-3">16.990.000đ</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thẻ Card Sản phẩm 4 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="position-absolute top-0 end-0 m-2 badge bg-danger">Sale</span>
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Sản phẩm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Sony WH-1000XM5</h5>
+                        <p class="card-text text-muted small flex-grow-1">Chống ồn chủ động đỉnh cao, âm trầm sâu lắng chuẩn phòng thu.</p>
+                        <p class="text-danger fw-bold mb-3">8.490.000đ</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 4. Bootstrap Modal: Xem Nhanh Chi Tiết Sản Phẩm -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="quickViewModalLabel">Thông Tin Chi Tiết Sản Phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <img src="https://placehold.co/300x200" class="img-fluid rounded" alt="Sản phẩm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Thiết bị Flagship Cao cấp</h4>
+                            <p class="text-success fw-bold">Tình trạng: Còn hàng chính hãng</p>
+                            <p class="text-muted small">Cam kết bảo hành toàn quốc trong vòng 12 tháng lỗi 1 đổi 1 từ nhà sản xuất.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">Chính hãng VNA</span>
+                                <span class="badge bg-info text-dark">Freeship</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng lại</button>
+                    <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Footer: Hệ thống thông tin 4 cột dùng Grid -->
+    <footer class="bg-dark text-secondary py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">Về chúng tôi</h5>
+                    <p class="small">Hệ thống phân phối thiết bị công nghệ uy tín hàng đầu, mang giá trị thật tới tay người tiêu dùng.</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">Liên kết nhanh</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none d-block py-1">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block py-1">Điều khoản dịch vụ</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">Hỗ trợ</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none d-block py-1">Trung tâm trợ giúp</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block py-1">Hướng dẫn hoàn trả mua hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5 class="text-white fw-bold mb-3">Liên hệ</h5>
+                    <p class="small mb-1">📍 Địa chỉ: Cổng trường Đại Học TLU</p>
+                    <p class="small">📞 Hotline: 1900 1234</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small">&copy; 2026 ShopTLU Store. Built exclusively with Bootstrap 5 Utilities.</div>
+        </div>
+    </footer>
+
+    <!-- Nhúng JS Bootstrap 5 đi kèm Popper phục vụ tương tác chuyển slide và bật Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

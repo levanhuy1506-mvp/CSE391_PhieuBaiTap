@@ -1,0 +1,20 @@
+// Gom toàn bộ mảnh partial vào dòng chảy biên dịch chính thống
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+// Thiết lập cài đặt cơ sở hạ tầng chung
+body {
+    font-family: $font-primary;
+    background-color: $light-bg;
+    color: $dark-color;
+    padding: $spacing-lg;
+}
+
+.header-badge {
+    @include flex-center; // Căn giữa nhanh gọn
+    background-color: $secondary-color;
+    color: white;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+}

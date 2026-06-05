@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Shortcuts & Accessibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="text-align: center; padding: 10px; background: #e2e8f0;">
+        💡 Phím tắt: <strong>Ctrl + K</strong> mở Palette | <strong>Mũi tên Trái/Phải</strong>: Chuyển ảnh | <strong>Space</strong>: Play/Pause Slide
+    </div>
+
+    <main class="gallery-container">
+        <h2>Photo Gallery (Bấm 1-4 để chọn ảnh nhanh)</h2>
+        <div class="gallery-main">
+            <img id="mainImage" src="https://picsum.photos/id/10/600/400" alt="Gallery Active Image" aria-live="polite">
+        </div>
+        <div class="thumbnails" id="thumbContainer"></div>
+    </main>
+
+    <div id="paletteOverlay" class="palette-overlay" role="dialog" aria-modal="true" aria-label="Command Palette">
+        <div class="palette-box">
+            <input type="text" id="paletteInput" placeholder="Gõ từ khóa (ví dụ: dark, light, next, prev)..." aria-label="Tìm kiếm lệnh">
+            <ul id="commandList" role="listbox"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
