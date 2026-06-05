@@ -142,3 +142,4 @@ paletteInput.addEventListener('keydown', (e) => {
 });
 
 initGallery();
+// Keyboard shortcuts completed
