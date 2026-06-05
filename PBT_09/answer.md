@@ -550,3 +550,4 @@ Chỉ 1 reflow
 * [x] screenshots/
 * [x] video OBS
 * [x] ít nhất 5 commits
+## Update 1
